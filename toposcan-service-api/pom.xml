@@ -79,12 +79,6 @@
 			<artifactId>toposcan-user-commons</artifactId>
 			<version>v1.0</version>
 		</dependency>
-		<!-- 用户依赖 -->
-		<dependency>
-			<groupId>com.sansec.scan</groupId>
-			<artifactId>toposcan-user-commons</artifactId>
-			<version>v1.0</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<finalName>toposcan-service-api</finalName>

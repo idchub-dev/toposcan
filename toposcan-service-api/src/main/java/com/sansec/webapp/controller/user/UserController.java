@@ -9,7 +9,7 @@ import com.sansec.feign.user.UserFeignClient;
 import com.sansec.module.user.Employee;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/user")
 public class UserController {
 	
 	@Autowired
