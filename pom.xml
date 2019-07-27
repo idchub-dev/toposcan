@@ -39,5 +39,6 @@
     <module>toposcan-user-commons</module>
     <module>toposcan-service-api</module>
     <module>toposcan-hystrix-dashboard</module>
+    <module>toposcan-zuul-gateway</module>
   </modules>
 </project>
