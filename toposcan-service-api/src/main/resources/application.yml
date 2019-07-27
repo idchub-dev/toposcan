@@ -15,5 +15,6 @@ eureka:
 feign:
   hystrix:
     enabled: true
+hystrix.command.default.execution.isolation.strategy: SEMAPHORE
 logging:
   config: classpath:log4j2.xml      
