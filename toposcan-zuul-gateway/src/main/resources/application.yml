@@ -10,4 +10,5 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 zuul:
+  sensitiveHeaders: 
   ignored-services: user #不暴露生产者
