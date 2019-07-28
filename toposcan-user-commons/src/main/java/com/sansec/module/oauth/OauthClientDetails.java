@@ -3,6 +3,8 @@ package com.sansec.module.oauth;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class OauthClientDetails implements Serializable {
 
 	/**
@@ -144,6 +146,7 @@ public class OauthClientDetails implements Serializable {
 		this.autoapprove = autoapprove;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -152,6 +155,7 @@ public class OauthClientDetails implements Serializable {
 		this.createTime = createTime;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getUpdateTime() {
 		return updateTime;
 	}

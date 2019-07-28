@@ -10,6 +10,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.CollectionUtils;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sansec.module.role.Role;
 
 public class Employee implements UserDetails{
@@ -25,11 +27,12 @@ public class Employee implements UserDetails{
 	
 	private String username;
 	
+	@JsonIgnore
 	private String password;
 	
-	private int type;
+	private int type;		//类型 0：内置用户
 	
-	private int status;
+	private int status;     //状态 0:锁定 1：激活
 	
 	private String email;
 	
@@ -168,6 +171,7 @@ public class Employee implements UserDetails{
 		this.roleId = roleId;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -176,6 +180,7 @@ public class Employee implements UserDetails{
 		this.createTime = createTime;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getUpdateTime() {
 		return updateTime;
 	}

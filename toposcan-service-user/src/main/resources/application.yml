@@ -11,6 +11,12 @@ spring:
       clientId: api
       clientSecret: api
       checkTokenUrl: http://localhost:8050/auth/oauth/check_token #正式部署时localhost为网关IP地址
+    server:
+      datasource:
+        url: jdbc:mysql://localhost:3306/toposcan_auth?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
+        username: root
+        password: 2wsx3edc
+        driverClassName: com.mysql.cj.jdbc.Driver
 eureka:
   client:
     serviceUrl:

@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.springframework.util.StringUtils;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.util.StringUtil;
 
 public class Role implements Serializable{
@@ -79,6 +80,7 @@ public class Role implements Serializable{
 		return set;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -87,6 +89,7 @@ public class Role implements Serializable{
 		this.createTime = createTime;
 	}
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date getUpdateTime() {
 		return updateTime;
 	}

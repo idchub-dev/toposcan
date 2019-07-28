@@ -99,7 +99,6 @@ public class FeignHeadersInterceptor implements RequestInterceptor {
 				if("authorization".equals(key.toLowerCase())) {
 					value = "Bearer " + token;
 				}
-				System.out.println(key + ":" + value);
 				template.header(key, value);
 			}
 		}

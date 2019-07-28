@@ -1,5 +1,8 @@
 package com.sansec.hystrix.user;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -19,12 +22,24 @@ public class UserHystrixFallBack implements UserFeignClient {
 	
 	@Override
 	public Employee queryById(int id) {
-		logger.info("根据ID查询用户发生异常");
+		logger.info("根据ID查询用户时发生异常");
 		Employee emp = new Employee();
 		emp.setId(-1);
 		emp.setUsername("");
 		emp.setName("");
 		return emp;
+	}
+
+	@Override
+	public List<Employee> query(String keyWord, int offset, int limit) {
+		logger.info("自定义条件查询用户时发生异常");
+		return new ArrayList<Employee>();
+	}
+
+	@Override
+	public int count(String keyWord) {
+		logger.info("自定义条件统计用户数时发生异常");
+		return -1;
 	}
 
 }

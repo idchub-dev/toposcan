@@ -1,16 +1,24 @@
 package com.sansec.feign.user;
 
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.sansec.hystrix.user.UserHystrixFallBack;
 import com.sansec.module.user.Employee;
 
 @FeignClient(name="user",fallback = UserHystrixFallBack.class)
 public interface UserFeignClient {
 	
-	@RequestMapping("/user/queryById")
+	@GetMapping("/user/queryById")
 	public Employee queryById(@RequestParam("id") int id);
+	
+	@GetMapping("/user/query")
+	public List<Employee> query(@RequestParam("keyWord") String keyWord,@RequestParam(name = "offset") int offset,
+			@RequestParam(name = "limit") int limit);
+	
+	@GetMapping("/user/count")
+	public int count(@RequestParam(name = "keyWord") String keyWord);
 }
