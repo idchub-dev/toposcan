@@ -32,6 +32,6 @@ public class AuthResourceConfig extends ResourceServerConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		//用户管理	
-		.antMatchers("/user/queryById").hasAnyRole("QUERY_USER");
+		.antMatchers("/user/queryById","/user/query").hasAnyRole("QUERY_USER");
 	}
 }
