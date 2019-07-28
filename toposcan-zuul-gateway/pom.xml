@@ -9,7 +9,7 @@
 		<version>v1.0</version>
 	</parent>
 	<artifactId>toposcan-zuul-gateway</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>toposcan-zuul-gateway Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>

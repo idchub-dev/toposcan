@@ -8,6 +8,9 @@
         <dependent-module archiveName="toposcan-user-commons-v1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/toposcan-user-commons/toposcan-user-commons">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="toposcan-commons-v1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/toposcan-commons/toposcan-commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="toposcan-service-api"/>
         <property name="java-output-path" value="/toposcan-service-api/target/classes"/>
     </wb-module>

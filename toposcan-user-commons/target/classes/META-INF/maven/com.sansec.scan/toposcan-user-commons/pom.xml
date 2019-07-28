@@ -16,6 +16,16 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-		
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-oauth2 -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-oauth2</artifactId>
+		</dependency>
+		<!-- 公共依赖 -->
+		<dependency>
+			<groupId>com.sansec.scan</groupId>
+			<artifactId>toposcan-commons</artifactId>
+			<version>v1.0</version>
+		</dependency>
 	</dependencies>
 </project>

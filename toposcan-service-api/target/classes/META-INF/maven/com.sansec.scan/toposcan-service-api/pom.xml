@@ -10,7 +10,7 @@
 		<version>v1.0</version>
 	</parent>
 	<artifactId>toposcan-service-api</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>toposcan-service-api Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
@@ -72,12 +72,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-		</dependency>
-		<!-- 用户依赖 -->
-		<dependency>
-			<groupId>com.sansec.scan</groupId>
-			<artifactId>toposcan-user-commons</artifactId>
-			<version>v1.0</version>
 		</dependency>
 		<!-- 用户依赖 -->
 		<dependency>

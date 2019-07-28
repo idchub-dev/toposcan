@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="toposcan-user-commons">
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <dependent-module archiveName="spring-security-oauth2-2.3.7.BUILD-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-security-oauth2/spring-security-oauth2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="toposcan-commons-v1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/toposcan-commons/toposcan-commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

@@ -75,4 +75,14 @@ public class Oauth2TokenTest {
 				new HttpEntity<MultiValueMap<String, String>>(formData, headers), Map.class).getBody();
 		System.out.println(map);
 	}
+	
+	@Test
+	public void testApi() {
+		MultiValueMap<String, String> formData = new LinkedMultiValueMap<String, String>();
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Authorization", "Bearer 8995bb7b-ced9-4a0a-b8db-80e643d3bf4f");
+		Map map = restTemplate.exchange("http://localhost:8050/api/user/queryById?id=2", HttpMethod.GET,
+				new HttpEntity<MultiValueMap<String, String>>(formData, headers), Map.class).getBody();
+		System.out.println(map);
+	}
 }

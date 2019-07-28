@@ -3,7 +3,9 @@ package com;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
+@EnableResourceServer
 @SpringBootApplication
 public class ToposcanServiceUserApplication extends SpringBootServletInitializer {
 

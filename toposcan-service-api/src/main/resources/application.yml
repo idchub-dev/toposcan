@@ -6,15 +6,37 @@ spring:
   mvc:
     servlet:
       load-on-startup: 1
+  api:
+    oauth:
+      clientId: api
+      clientSecret: api
+      checkTokenUrl: http://localhost:8050/auth/oauth/check_token #正式部署时localhost为网关IP地址      
+      accessTokenUrl: http://localhost:8050/auth/oauth/token #正式部署时localhost为网关IP地址
+      scope: cloud
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    preferIpAddress: true    
+    preferIpAddress: true
+
 feign:
   hystrix:
     enabled: true
-hystrix.command.default.execution.isolation.strategy: SEMAPHORE
+    
+ribbon:
+  ConnectTimeout: 10000 # 连接超时时间(ms)
+  ReadTimeout: 10000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000 # 熔断超时时长：6000ms  
+          strategy: SEMAPHORE
 logging:
   config: classpath:log4j2.xml      
