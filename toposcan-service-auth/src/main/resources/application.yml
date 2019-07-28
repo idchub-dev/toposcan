@@ -1,0 +1,21 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: auth
+  mvc:
+    servlet:
+      load-on-startup: 1
+  auth:
+    server:
+      datasource:
+        url: jdbc:mysql://localhost:3306/toposcan_auth?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
+        username: root
+        password: 2wsx3edc
+        driverClassName: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  config: classpath:log4j2.xml      
